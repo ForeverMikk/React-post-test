@@ -1,11 +1,24 @@
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 export const listPost = async () => {
-  await fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => console.log(json));
+  try {
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+
+  // console.log(postData);
+  // const posts = postData.map((post) => {
+  //   return {
+  //     id: post.id,
+  //     title: post.title,
+  //     body: post.body,
+  //   };
+  // });
+
+  // console.log(posts);
+  // return posts;
 };
 
 export const createPost = async (title, body) => {
