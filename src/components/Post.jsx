@@ -62,6 +62,7 @@ const AddPost = ({ setUpdate, setPosts, posts }) => {
 
   return (
     <form onSubmit={createPost}>
+      <h1 className="create-title"> Post Data </h1>
       <input
         type="text"
         onChange={handleChange}
@@ -74,7 +75,7 @@ const AddPost = ({ setUpdate, setPosts, posts }) => {
         value={post.body}
         name="body"
       />
-      <button className="add-post">Create Post</button>
+      <button>Create Post</button>
     </form>
   );
 };
